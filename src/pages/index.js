@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Section from '../components/section'
 
 const IndexPage = () => (
   <div>
-    <section style={{ background: 'blue', minHeight: '100vh' }} />
-    <section style={{ background: 'green', minHeight: '100vh' }} />
+    <Section color="blue" />
+    <Section color="red" />
   </div>
 
   // <div>
