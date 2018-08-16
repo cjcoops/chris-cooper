@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './intro.module.css'
 
 const Intro = ({ color }) => (
-  <div className="intro" style={{ backgroundColor: color }}>
+  <div className="intro" style={{ background: color }}>
     <div className="content intro-content">
       <h1>Hi, I'm Chris Cooper.</h1>
       <h3>
