@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './intro.module.css'
 
-const Intro = () => (
-  <div className={styles.section}>
-    <div className={styles.sectioncontent}>
+const Intro = ({ color }) => (
+  <div className="intro" style={{ backgroundColor: color }}>
+    <div className="section-content intro-content">
       <h1>Hi, I'm Chris Cooper.</h1>
       <h3>
         I'm a full stack software developer, currently living in Vancouver.
