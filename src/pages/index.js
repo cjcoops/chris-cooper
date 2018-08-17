@@ -4,11 +4,12 @@ import Intro from '../components/intro'
 import About from '../components/about'
 import EventList from '../components/eventList'
 import Section from '../components/section'
+import Skills from '../components/skills'
 
-import sections from '../../data/sections.json'
+import site from '../../data/site.json'
 
 const IndexPage = () => {
-  const { about, experience, education } = sections
+  const { about, experience, education, skills } = site
 
   return (
     <div>
@@ -24,6 +25,10 @@ const IndexPage = () => {
 
       <Section data={education}>
         <EventList data={education} />
+      </Section>
+
+      <Section data={skills}>
+        <Skills data={skills} />
       </Section>
     </div>
   )

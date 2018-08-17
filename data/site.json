@@ -48,5 +48,23 @@
         "description": null
       }
     ]
+  },
+  "skills": {
+    "title": "Skills",
+    "background": "linear-gradient(#f6e8e5, #f6e8e5)",
+    "strong": [
+      "Javascript",
+      "Typescript",
+      "Angular",
+      "Node.js",
+      "PostgreSQL",
+      "HTML5",
+      "CSS3",
+      "AWS",
+      "REST APIs",
+      "Git",
+      "npm"
+    ],
+    "knowledgable": ["React", "Ruby", "Serverless", "jQuery"]
   }
 }
