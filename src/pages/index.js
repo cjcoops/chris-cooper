@@ -30,22 +30,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-// export const query = graphql`
-//   query SectionsQuery {
-//     allSectionsJson {
-//       edges {
-//         node {
-//           title
-//           background
-//           items {
-//             title
-//             subtitle
-//             description
-//           }
-//           text
-//         }
-//       }
-//     }
-//   }
-// `
