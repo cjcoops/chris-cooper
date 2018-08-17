@@ -11,8 +11,7 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-json": "^1.0.20",
     "react-helmet": "^5.2.0",
-    "typography-theme-doelger": "^0.15.11",
-    "underscore": "^1.9.1"
+    "typography-theme-doelger": "^0.15.11"
   },
   "keywords": [
     "gatsby"
