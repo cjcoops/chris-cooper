@@ -634,8 +634,8 @@ pre tt:after {
   display: grid;
 }
 
-.content {
-  background-color: white;
+.container {
+  /* background-color: white; */
   padding: 60px 60px;
   max-width: 1264px;
   background-color: inherit;
@@ -655,13 +655,13 @@ pre tt:after {
 } */
 
 @media only screen and (max-width: 900px) {
-  .content {
+  .container {
     padding: 30px 20px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .content {
+  .container {
     padding: 20px 10px;
   }
 

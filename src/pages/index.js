@@ -5,6 +5,7 @@ import About from '../components/about'
 import EventList from '../components/eventList'
 import Section from '../components/section'
 import Skills from '../components/skills'
+import Footer from '../components/footer'
 
 import site from '../../data/site.json'
 
@@ -30,6 +31,8 @@ const IndexPage = () => {
       <Section data={skills}>
         <Skills data={skills} />
       </Section>
+
+      <Footer />
     </div>
   )
 }

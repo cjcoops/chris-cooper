@@ -3,7 +3,7 @@ import styles from './intro.module.css'
 
 const Intro = ({ color }) => (
   <div className="intro" style={{ background: color }}>
-    <div className="content intro-content">
+    <div className="container intro-content ">
       <h1>Hi, I'm Chris Cooper.</h1>
       <h3>
         I'm a full stack software developer, currently living in Vancouver.
