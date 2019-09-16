@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Intro color="linear-gradient(#f6e8e5, #f6e8e5)" />
 
       <Section data={about}>
-        <About />
+        <About data={about} />
       </Section>
 
       <Section data={experience}>
