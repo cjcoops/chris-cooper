@@ -12,6 +12,7 @@ const IndexPage = () => (
       <p className="mt-10">Hi, I'm Chris Cooper.</p>
       <p className="mt-6 sm:mt-8 md:mt-10">
         I'm a web developer from the United Kingdom living in Vancouver, Canada.
+        🇨🇦
       </p>
       <p className="mt-6 sm:mt-8 md:mt-10">
         I'm passionate about JavaScript and writing clean, tested and

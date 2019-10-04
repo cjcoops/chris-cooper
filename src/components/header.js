@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import HeaderInternalLink from "./header-internal-link"
 
 const Header = () => (
   <header>
@@ -25,6 +26,19 @@ const Header = () => (
               ></path>
             </svg>
           </button>
+        </div>
+      </div>
+      <div className="block">
+        <div className="w-full block mt-10 text-gray-700 font-medium">
+          <div>
+            {/* <Link
+              to="/resume"
+              className="block pb-6 border-b border-transparent"
+            >
+              Resume
+            </Link> */}
+            <HeaderInternalLink label="Resume" to="resume" />
+          </div>
         </div>
       </div>
     </div>
