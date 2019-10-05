@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import HeaderInternalLink from "./header-internal-link"
+import HeaderExternalLink from "./header-external-link"
 
 const Header = () => (
   <header>
@@ -31,13 +32,18 @@ const Header = () => (
       <div className="block">
         <div className="w-full block mt-10 text-gray-700 font-medium">
           <div>
-            {/* <Link
-              to="/resume"
-              className="block pb-6 border-b border-transparent"
-            >
-              Resume
-            </Link> */}
             <HeaderInternalLink label="Resume" to="resume" />
+          </div>
+          <div>
+            <HeaderExternalLink
+              label="Instagram"
+              href="https://www.instagram.com/cjcoops/"
+            />
+            <HeaderExternalLink
+              label="GitHub"
+              href="https://github.com/cjcoops"
+              classes="mt-6"
+            />
           </div>
         </div>
       </div>
