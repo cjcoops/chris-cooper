@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import Image from "../components/image";
+import SEO from "../components/seo";
 
 const IndexPage = () => (
   <Layout>
@@ -19,10 +19,26 @@ const IndexPage = () => (
         maintainable code.
       </p>
     </div>
+    <p className="border-gray-400 border-t pt-6 mt-6 sm:mt-8 md:mt-10 mb-20 text-gray-700 text-sm sm:text:base lg:text-lg">
+      This website was built with{" "}
+      <a
+        href="https://www.gatsbyjs.org/"
+        className="border-b border-gray-900 text-gray-900"
+      >
+        Gatsby
+      </a>
+      &nbsp;and&nbsp;
+      <a
+        href="https://tailwindcss.com"
+        className="border-b border-gray-900 text-gray-900"
+      >
+        TailwindCSS
+      </a>
+    </p>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 {
   /* <Layout>

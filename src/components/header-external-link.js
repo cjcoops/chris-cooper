@@ -1,7 +1,10 @@
 import React from "react"
 
 const HeaderExternalLink = ({ label, href, classes }) => (
-  <a href={href} className={`flex align-center hover:text-gray-900 ${classes}`}>
+  <a
+    href={href}
+    className={`flex align-center hover:text-gray-900 ${classes || ""}`}
+  >
     <div>{label}</div>
     <svg
       width="25"
