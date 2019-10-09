@@ -19,12 +19,12 @@ const Header = () => {
             onClick={() => setIsExpanded(!isExpanded)}
           />
         </div>
-        <div className={isExpanded ? "block" : "hidden"}>
-          <div className="w-full block mt-10 text-gray-700 font-medium">
-            <div>
+        <div className={`${isExpanded ? "block" : "hidden"} lg:block`}>
+          <div className="w-full block lg:flex lg:justify-between lg:border-b lg:border-gray-400 mt-10 text-gray-700 font-medium lg:text-lg">
+            <div className="lg:flex -mb-px">
               <HeaderInternalLink label="Resume" to="resume" />
             </div>
-            <div>
+            <div className="lg:flex">
               <HeaderExternalLink
                 label="Instagram"
                 href="https://www.instagram.com/cjcoops/"

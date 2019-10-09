@@ -15,6 +15,16 @@ const IndexPage = () => (
         🇨🇦
       </p>
       <p className="mt-6 sm:mt-8 md:mt-10">
+        I'm currently working for&nbsp;
+        <a
+          href="https://koresoftware.com/"
+          className="border-b border-gray-900 pb-px md:pb-1 text-gray-900"
+        >
+          KORE Software
+        </a>
+        &nbsp;in Vancouver.
+      </p>
+      <p className="mt-6 sm:mt-8 md:mt-10">
         I'm passionate about JavaScript and writing clean, tested and
         maintainable code.
       </p>
@@ -33,6 +43,13 @@ const IndexPage = () => (
         className="border-b border-gray-900 text-gray-900"
       >
         TailwindCSS
+      </a>
+      &nbsp;and is hosted on&nbsp;
+      <a
+        href="https://www.netlify.com/"
+        className="border-b border-gray-900 text-gray-900"
+      >
+        Netlify.
       </a>
     </p>
   </Layout>
