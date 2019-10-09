@@ -20,7 +20,7 @@ const IndexPage = () => (
       </p>
     </div>
     <p className="border-gray-400 border-t pt-6 mt-6 sm:mt-8 md:mt-10 mb-20 text-gray-700 text-sm sm:text:base lg:text-lg">
-      This website was built with{" "}
+      This website was built with&nbsp;
       <a
         href="https://www.gatsbyjs.org/"
         className="border-b border-gray-900 text-gray-900"
