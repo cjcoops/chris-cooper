@@ -13,7 +13,7 @@ const HeaderExternalLink = ({ label, href, classes }) => (
       viewBox="0 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="ml-1 -mt-px"
+      className="ml-1 -mt-px"
     >
       <path d="M16.5 13V18.5H6.5V8.5H12" stroke="#4A5568"></path>
       <path d="M10 15L18.5 6.5" stroke="#4A5568"></path>
