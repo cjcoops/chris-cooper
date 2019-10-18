@@ -4,7 +4,11 @@
     "company": "Kore Software",
     "location": "Vancouver, BC",
     "period": "Sep 2018 - Current",
-    "description": ["I did some things", "And some other things"]
+    "description": [
+      "Full stack development in an Agile team building an industry leading SAAS product for the brand sponsorship market",
+      "Primary technologies used: Angular (V7), .NET CORE, AWS and MySQL",
+      "While full stack I became the “go to” person in team for front-end development"
+    ]
   },
   {
     "name": "Full Stack Developer",

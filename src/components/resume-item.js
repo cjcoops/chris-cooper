@@ -14,7 +14,7 @@ const ResumeItem = ({ name, company, location, period, description }) => (
           <div>{period}</div>
         </div>
         {description ? (
-          <ul className="text-gray-700 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3 list-inside">
+          <ul className="text-gray-700 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3 list-outside">
             {description.map(item => (
               <li key={item}>{item}</li>
             ))}
@@ -24,5 +24,5 @@ const ResumeItem = ({ name, company, location, period, description }) => (
     </div>
   </div>
 );
-
+// use text-indent negative on the li?
 export default ResumeItem;
