@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Software Developer",
+    "company": "Kore Software",
+    "location": "Vancouver, BC",
+    "period": "Sep 2018 - Current",
+    "description": ["I did some things", "And some other things"]
+  },
+  {
+    "name": "Full Stack Developer",
+    "company": "Cordant Group",
+    "location": "London, UK",
+    "period": "Mar 2017 - July 2018",
+    "description": ["I did some things", "And some other things"]
+  },
+  {
+    "name": "Investment Consultant",
+    "company": "Aon",
+    "location": "London, UK",
+    "period": "Sep 2010 - Oct 2016"
+  }
+]

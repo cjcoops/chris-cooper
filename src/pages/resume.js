@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -16,25 +16,33 @@ const SecondPage = () => (
           </h2>
         </div>
         <div className="w-full md:w-2/3">
-          <ResumeItem
-            name="Software Developer"
-            company="Kore Software"
-            location="Vancouver, BC"
-            period="Sep 2018 - Current"
-            description={["I did some things", "And some other things"]}
-          />
-          <ResumeItem
-            name="Full Stack Developer"
-            company="Cordant Group"
-            location="London, UK"
-            period="Mar 2017 - July 2018"
-            description={["I did some things"]}
-          />
-          <ResumeItem
-            name="Investment Consultant"
-            company="Aon"
-            location="London, UK"
-            period="Sep 2010 - Oct 2016"
+          <StaticQuery
+            query={graphql`
+              query ExperienceQuery {
+                allExperienceJson {
+                  edges {
+                    node {
+                      name
+                      company
+                      location
+                      period
+                      description
+                    }
+                  }
+                }
+              }
+            `}
+            render={data =>
+              data.allExperienceJson.edges.map(item => (
+                <ResumeItem
+                  name={item.node.name}
+                  company={item.node.company}
+                  location={item.node.location}
+                  period={item.node.period}
+                  description={item.node.description}
+                />
+              ))
+            }
           />
         </div>
       </div>
