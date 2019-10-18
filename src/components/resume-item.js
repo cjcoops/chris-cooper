@@ -1,5 +1,5 @@
 import React from "react";
-import TickBullet from "./tick-bullet";
+import styles from "./resume-item.module.css";
 
 const ResumeItem = ({ name, company, location, period, description }) => (
   <div className="border-b border-gray-400 py-6 sm:py-8 lg:py-10">
@@ -14,7 +14,7 @@ const ResumeItem = ({ name, company, location, period, description }) => (
           <div>{period}</div>
         </div>
         {description ? (
-          <ul className="text-gray-700 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3">
+          <ul className="text-gray-700 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3 list-inside">
             {description.map(item => (
               <li key={item}>{item}</li>
             ))}
