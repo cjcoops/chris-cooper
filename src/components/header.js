@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import HeaderInternalLink from "./header-internal-link";
 import HeaderExternalLink from "./header-external-link";
 import Burger from "./burger";
+import Profile from "../images/kew-profile-square.jpg";
+
+// Links - GitHub, DevTo, Instagram,
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -11,9 +14,16 @@ const Header = () => {
     <header>
       <div>
         <div className="flex justify-between items-center mt-10">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium md:font-normal leading-none">
-            <Link to="/">Chris Cooper</Link>
-          </h1>
+          <div className="flex items-center">
+            <img
+              src={Profile}
+              alt="Chris Cooper"
+              className="h-16 object-cover rounded-full mr-3"
+            />
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium md:font-normal leading-none">
+              <Link to="/">Chris Cooper</Link>
+            </h1>
+          </div>
           <Burger
             isExpanded={isExpanded}
             onClick={() => setIsExpanded(!isExpanded)}
