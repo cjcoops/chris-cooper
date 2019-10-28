@@ -1,33 +1,35 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
 
-const IndexPage = () => (
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => (
   <Layout>
     {/* <SEO title="Home" /> */}
-    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl md:font-light text-gray-700">
-      <p className="mt-10">Hi, I'm Chris Cooper.</p>
-      <p className="mt-6 sm:mt-8 md:mt-10">
-        I'm a web developer from the United Kingdom living in Vancouver, Canada.
-        🇨🇦
+    <div className="text-l sm:text-2xl md:text-3xl lg:text-4xl md:font-light text-gray-700">
+      <p className="mt-6">Hi, I'm Chris.</p>
+      <p className="mt-4 sm:mt-8 md:mt-10">
+        I'm a web developer from England currently living and working in
+        Vancouver, Canada. 🇨🇦
       </p>
-      <p className="mt-6 sm:mt-8 md:mt-10">
-        I'm currently working for&nbsp;
-        <a
-          href="https://koresoftware.com/"
-          className="border-b border-gray-900 pb-px md:pb-1 text-gray-900"
-        >
-          KORE Software
-        </a>
-        &nbsp;in Vancouver.
-      </p>
-      <p className="mt-6 sm:mt-8 md:mt-10">
+      <p className="mt-4 sm:mt-8 md:mt-10">
         I'm passionate about JavaScript and writing clean, tested and
         maintainable code.
       </p>
+    </div>
+    <div className="mt-6">
+      <h2>Latest posts</h2>
+      <div>
+        {edges.map(edge => (
+          <div key={edge.node.id}>{edge.node.frontmatter.title}</div>
+        ))}
+      </div>
     </div>
     <p className="border-gray-400 border-t pt-6 mt-6 sm:mt-8 md:mt-10 mb-20 text-gray-700 text-sm sm:text:base lg:text-lg">
       This website was built with&nbsp;
@@ -56,6 +58,24 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`;
 
 {
   /* <Layout>

@@ -1,53 +1,48 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import HeaderInternalLink from "./header-internal-link";
-import HeaderExternalLink from "./header-external-link";
+
 import Burger from "./burger";
 import Profile from "../images/kew-profile-square.jpg";
+import Navigation from "./navigation";
 
 // Links - GitHub, DevTo, Instagram,
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
+  console.log(isExpanded);
+
   return (
     <header>
       <div>
-        <div className="flex justify-between items-center mt-10">
-          <div className="flex items-center">
+        <div className="mt-5">
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-900 font-medium md:font-normal leading-none">
+            <Link to="/">Chris Cooper</Link>
+          </h1>
+          <div className="flex justify-center mt-5">
+            <img
+              src={Profile}
+              alt="Chris Cooper"
+              className="h-40 object-cover rounded-full shadow-inner"
+            />
+          </div>
+          {/* <div className="flex items-center">
             <img
               src={Profile}
               alt="Chris Cooper"
               className="h-16 object-cover rounded-full mr-3"
             />
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium md:font-normal leading-none">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-900 font-medium md:font-normal leading-none">
               <Link to="/">Chris Cooper</Link>
             </h1>
-          </div>
-          <Burger
-            isExpanded={isExpanded}
-            onClick={() => setIsExpanded(!isExpanded)}
-          />
-        </div>
-        <div className={`${isExpanded ? "block" : "hidden"} lg:block`}>
-          <div className="w-full block lg:flex lg:justify-between lg:border-b lg:border-gray-400 mt-10 text-gray-700 font-medium lg:text-lg">
-            <div className="lg:flex -mb-px">
-              <HeaderInternalLink label="Resume" to="resume" />
-            </div>
-            <div className="lg:flex">
-              <HeaderExternalLink
-                label="Instagram"
-                href="https://www.instagram.com/cjcoops/"
-              />
-              <HeaderExternalLink
-                label="GitHub"
-                href="https://github.com/cjcoops"
-                classes="mt-6"
-              />
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
+      <Burger
+        isExpanded={isExpanded}
+        onClick={() => setIsExpanded(!isExpanded)}
+      />
+      {isExpanded ? <Navigation /> : null}
     </header>
   );
 };

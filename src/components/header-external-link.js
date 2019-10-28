@@ -3,11 +3,12 @@ import React from "react";
 const HeaderExternalLink = ({ label, href, classes }) => (
   <a
     href={href}
-    className={`flex align-center lg:mt-0 lg:ml-8 hover:text-gray-900 hover:text-gray-900 ${classes ||
+    className={`flex align-center hover:text-gray-900 hover:text-gray-900 ${classes ||
       ""}`}
   >
-    <div>{label}</div>
-    <svg
+    {label}
+    {/* <div>{label}</div> */}
+    {/* <svg
       width="25"
       height="25"
       viewBox="0 0 25 25"
@@ -18,7 +19,7 @@ const HeaderExternalLink = ({ label, href, classes }) => (
       <path d="M16.5 13V18.5H6.5V8.5H12" stroke="#4A5568"></path>
       <path d="M10 15L18.5 6.5" stroke="#4A5568"></path>
       <path d="M14 6.5H18.5V11" stroke="#4A5568"></path>
-    </svg>
+    </svg> */}
   </a>
 );
 
