@@ -2,7 +2,7 @@ import React from "react";
 
 const Burger = ({ isExpanded, onClick }) => (
   <div
-    className="lg:hidden absolute z-50"
+    className="md:hidden absolute z-50"
     style={{ top: "1rem", right: "1rem" }}
   >
     <button type="button" onClick={onClick}>

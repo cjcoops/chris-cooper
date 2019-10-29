@@ -6,37 +6,21 @@ import Burger from "./burger";
 import Profile from "../images/kew-profile-square.jpg";
 import Navigation from "./navigation";
 
-// Links - GitHub, DevTo, Instagram,
-
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  console.log(isExpanded);
 
   return (
     <header>
-      <div>
-        <div className="mt-5">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-900 font-medium md:font-normal leading-none">
-            <Link to="/">Chris Cooper</Link>
-          </h1>
-          <div className="flex justify-center mt-5">
-            <img
-              src={Profile}
-              alt="Chris Cooper"
-              className="h-40 object-cover rounded-full shadow-inner"
-            />
-          </div>
-          {/* <div className="flex items-center">
-            <img
-              src={Profile}
-              alt="Chris Cooper"
-              className="h-16 object-cover rounded-full mr-3"
-            />
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-900 font-medium md:font-normal leading-none">
-              <Link to="/">Chris Cooper</Link>
-            </h1>
-          </div> */}
-        </div>
+      <div className="mt-5 pb-4 flex items-baseline justify-between flex-grow md:mt-10 ">
+        <h1 className="text-m sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium leading-none">
+          <Link to="/">Chris Cooper</Link>
+        </h1>
+        <a
+          href=""
+          className="hidden text-gray-700 md:block text-xl border-b border-transparent hover:border-gray-900 hover:text-gray-900 pb-1"
+        >
+          Resume
+        </a>
       </div>
       <Burger
         isExpanded={isExpanded}

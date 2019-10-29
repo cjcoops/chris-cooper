@@ -20,6 +20,20 @@ module.exports = {
         name: `markdown`,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: `${__dirname}/src/data`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
+        path: `${__dirname}/src/assets`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -49,10 +63,11 @@ module.exports = {
     },
     "gatsby-transformer-json",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-plugin-react-svg",
       options: {
-        name: "data",
-        path: `${__dirname}/src/data`,
+        rule: {
+          include: /svg/, // See below to configure properly
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

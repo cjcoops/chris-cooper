@@ -6,8 +6,10 @@ module.exports = {
   //     // ...
   //   }),
   // },
-  // variants: {
-  //   gradients: ["responsive", "hover"],
-  // },
+  variants: {
+    // gradients: ["responsive", "hover"],
+    textColor: ["group-hover", "hover"],
+    borderColor: ["group-hover", "hover"],
+  },
   // plugins: [require("./plugins/gradients")],
 };

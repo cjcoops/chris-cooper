@@ -13,7 +13,7 @@ li:before {
   display: inline-block;
   height: 0.8em;
   width: 0.8em;
-  background-image: url(../assets/success.svg);
+  background-image: url(../svg/success.svg);
   background-size: contain;
   margin-right: 0.5em;
 }
