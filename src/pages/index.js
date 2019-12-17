@@ -4,7 +4,6 @@ import Profile from "../images/kew-profile-square.jpg";
 
 import Layout from "../components/layout";
 import Image from "../components/image";
-
 import SEO from "../components/seo";
 import PostExcerpt from "../components/post-excerpt";
 
