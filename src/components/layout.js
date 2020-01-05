@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div className="antialiased">
+      <div className="antialiased font-sans">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <Header />
           <main>{children}</main>

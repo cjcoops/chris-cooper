@@ -21,11 +21,11 @@ const IndexPage = ({
     <div className=" sm:text-2xl md:text-3xl lg:text-4xl md:font-light text-gray-700">
       <div>
         <div className="mx-auto flex justify-center h-40 w-40 md:float-right md:ml-5 ">
-          <img
+          {/* <img
             src={Profile}
             alt="Chris Cooper"
             className="h-full object-cover rounded-full shadow-inner"
-          />
+          /> */}
         </div>
         <p className="mt-6">Hi, I'm Chris.</p>
         <p className="mt-4 sm:mt-8">

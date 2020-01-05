@@ -6,6 +6,27 @@ module.exports = {
   //     // ...
   //   }),
   // },
+  theme: {
+    // Add Apercu Pro font family
+    fontFamily: {
+      sans: [
+        "Apercu Pro",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Arial",
+        "Noto Sans",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
+      mono: ["Apercu Pro Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+    },
+  },
   variants: {
     // gradients: ["responsive", "hover"],
     textColor: ["group-hover", "hover"],
