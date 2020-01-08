@@ -22,9 +22,9 @@ const Navigation = () => {
   `);
 
   return (
-    <div className="flex h-screen w-screen absolute top-0 left-0 z-40 bg-blue-900 items-center justify-center">
-      <div className="text-center text-blue-200 text-2xl font-medium">
-        <a
+    <div className="absolute top-0 left-0 z-40 flex items-center justify-center w-screen h-screen dark-gradient">
+      <div className="text-2xl font-medium text-center text-gray-100">
+        {/* <a
           href={data.allFile.edges[0].node.publicURL}
           className="flex items-center justify-center pb-6 group"
           download
@@ -32,50 +32,32 @@ const Navigation = () => {
           <Download
             width="30"
             height="30"
-            className="fill-current text-blue-200 mr-3 group-hover:text-gray-100"
+            className="mr-3 text-blue-200 fill-current group-hover:text-gray-100"
           />
-          <div className="pb-1 group-hover:text-gray-100 border-b border-transparent group-hover:border-gray-100">
+          <div className="pb-1 border-b border-transparent group-hover:text-gray-100 group-hover:border-gray-100">
             Resume
           </div>
-        </a>
+        </a> */}
         <a
           href="https://dev.to/cjcoops"
-          className="flex items-center justify-center pb-6 group"
+          className="flex items-center justify-center pb-6 "
         >
-          <DevTo
-            width="30"
-            height="30"
-            className="fill-current text-blue-200 mr-3 group-hover:text-gray-100"
-          />
-          <div className="pb-1 group-hover:text-gray-100 border-b border-transparent group-hover:border-gray-100">
-            Blog
-          </div>
+          <DevTo width="30" height="30" className="mr-3 fill-current " />
+          <div className="pb-1 ">Blog</div>
         </a>
         <a
           href="https://github.com/cjcoops"
-          className="flex items-center justify-center pb-6 group"
+          className="flex items-center justify-center pb-6 "
         >
-          <GitHub
-            width="30"
-            height="30"
-            className="fill-current text-blue-200 mr-3 group-hover:text-gray-100"
-          />
-          <div className="pb-1 group-hover:text-gray-100 border-b border-transparent group-hover:border-gray-100">
-            GitHub
-          </div>
+          <GitHub width="30" height="30" className="mr-3 fill-current " />
+          <div className="pb-1 ">GitHub</div>
         </a>
         <a
           href="https://www.instagram.com/cjcoops/"
-          className="flex items-center justify-center pb-6 group"
+          className="flex items-center justify-center pb-6 "
         >
-          <Instagram
-            width="30"
-            height="30"
-            className="fill-current text-blue-200 mr-3 group-hover:text-gray-100"
-          />
-          <div className="pb-1 group-hover:text-gray-100 border-b border-transparent group-hover:border-gray-100">
-            Instagram
-          </div>
+          <Instagram width="30" height="30" className="mr-3 fill-current " />
+          <div className="pb-1 ">Instagram</div>
         </a>
       </div>
     </div>

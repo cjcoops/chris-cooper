@@ -13,14 +13,14 @@ const Header = () => {
     <header>
       <div className="mt-5 pb-4 flex items-baseline justify-between flex-grow md:mt-10 ">
         <h1 className="text-m sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium leading-none">
-          <Link to="/">Chris Cooper</Link>
+          <Link to="/">chriscooper.cc</Link>
         </h1>
-        <a
+        {/* <a
           href=""
           className="hidden text-gray-700 md:block text-xl border-b border-transparent hover:border-gray-900 hover:text-gray-900 pb-1"
         >
           Resume
-        </a>
+        </a> */}
       </div>
       <Burger
         isExpanded={isExpanded}
