@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Burger from "./burger";
 import Profile from "../images/kew-profile-square.jpg";
@@ -9,7 +9,11 @@ import Navigation from "./navigation";
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  window.addEventListener("resize", () => setIsExpanded(false));
+  // window.addEventListener("resize", () => setIsExpanded(false));
+
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => setIsExpanded(false));
+  // }, []);
 
   return (
     <header>
