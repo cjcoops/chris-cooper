@@ -17,7 +17,7 @@ const IndexPage = ({
     <div className="text-gray-700 sm:text-2xl ">
       <div>
         <p className="mt-6 max-w-60ch">
-          Hi, I'm{" "}
+          Hi, I'm&nbsp;
           <span className="font-medium text-chris-blue">Chris Cooper</span>. I'm
           a&nbsp;
           <span className="font-medium text-chris-blue">web developer</span>
@@ -27,15 +27,6 @@ const IndexPage = ({
           <span className="font-medium text-chris-blue">JavaScript</span> and
           writing clean, tested and maintainable code.
         </p>
-        {/* <p className="mt-4 sm:mt-8">
-          I'm a web developer from England currently living and working in
-          Vancouver. I'm passionate about JavaScript and writing clean, tested
-          and maintainable code.
-        </p> */}
-        {/* <p className="mt-4 sm:mt-8">
-          I'm passionate about JavaScript and writing clean, tested and
-          maintainable code.
-        </p> */}
       </div>
     </div>
     <ul className="flex-wrap hidden mt-8 font-medium text-gray-600 sm:flex text-m md:text-xl ">
@@ -87,21 +78,21 @@ const IndexPage = ({
         Built with&nbsp;
         <a
           href="https://www.gatsbyjs.org/"
-          className="text-gray-900 border-b border-gray-900"
+          className="text-gray-900 border-gray-900 hover:border-b"
         >
           Gatsby
         </a>
         &nbsp;and&nbsp;
         <a
           href="https://tailwindcss.com"
-          className="text-gray-900 border-b border-gray-900"
+          className="text-gray-900 border-gray-900 hover:border-b"
         >
           TailwindCSS
         </a>
         &nbsp;and hosted on&nbsp;
         <a
           href="https://www.netlify.com/"
-          className="text-gray-900 border-b border-gray-900"
+          className="text-gray-900 border-gray-900 hover:border-b"
         >
           Netlify
         </a>

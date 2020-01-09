@@ -9,15 +9,17 @@ import Navigation from "./navigation";
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  window.addEventListener("resize", () => setIsExpanded(false));
+
   return (
     <header>
-      <div className="mt-5 pb-4 flex items-baseline justify-between flex-grow md:mt-10 ">
-        <h1 className="text-m sm:text-xl md:text-2xl lg:text-3xl text-gray-900 font-medium leading-none">
+      <div className="flex items-baseline justify-between flex-grow pb-4 mt-5 md:mt-10 ">
+        <h1 className="font-medium leading-none text-gray-900 text-m sm:text-xl md:text-2xl lg:text-3xl">
           <Link to="/">chriscooper.cc</Link>
         </h1>
         {/* <a
           href=""
-          className="hidden text-gray-700 md:block text-xl border-b border-transparent hover:border-gray-900 hover:text-gray-900 pb-1"
+          className="hidden pb-1 text-xl text-gray-700 border-b border-transparent md:block hover:border-gray-900 hover:text-gray-900"
         >
           Resume
         </a> */}

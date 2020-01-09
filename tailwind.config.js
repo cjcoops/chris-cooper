@@ -45,6 +45,7 @@ module.exports = {
     // gradients: ["responsive", "hover"],
     textColor: ["group-hover", "hover"],
     borderColor: ["group-hover", "hover"],
+    borderWidth: ["hover"],
   },
   // plugins: [require("./plugins/gradients")],
 };
