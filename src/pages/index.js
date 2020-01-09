@@ -16,40 +16,60 @@ const IndexPage = ({
     {/* <SEO title="Home" /> */}
     <div className="text-gray-700 sm:text-2xl ">
       <div>
-        <p className="mt-6">Hi, I'm Chris Cooper.</p>
-        <p className="mt-4 sm:mt-8">
-          I'm a web developer from England currently living and working in
-          Vancouver.
+        <p className="mt-6 max-w-60ch">
+          Hi, I'm{" "}
+          <span className="font-medium text-chris-blue">Chris Cooper</span>. I'm
+          a&nbsp;
+          <span className="font-medium text-chris-blue">web developer</span>
+          &nbsp;from England currently living and working in&nbsp;
+          <span className="font-medium text-chris-blue">Vancouver</span>. I'm
+          passionate about&nbsp;
+          <span className="font-medium text-chris-blue">JavaScript</span> and
+          writing clean, tested and maintainable code.
         </p>
-        <p className="mt-4 sm:mt-8">
+        {/* <p className="mt-4 sm:mt-8">
+          I'm a web developer from England currently living and working in
+          Vancouver. I'm passionate about JavaScript and writing clean, tested
+          and maintainable code.
+        </p> */}
+        {/* <p className="mt-4 sm:mt-8">
           I'm passionate about JavaScript and writing clean, tested and
           maintainable code.
-        </p>
+        </p> */}
       </div>
     </div>
-    <ul className="flex-wrap hidden mt-8 font-mono text-gray-600 sm:flex text-m md:text-xl">
+    <ul className="flex-wrap hidden mt-8 font-medium text-gray-600 sm:flex text-m md:text-xl ">
       <li className="mr-6 md:mr-8">
-        <a href="https://dev.to/cjcoops" className="">
+        <a href="https://dev.to/cjcoops" className="hover:text-chris-blue">
           Dev.to
         </a>
       </li>
       <li className="mr-6 md:mr-8">
-        <a href="https://github.com/cjcoops" className="">
+        <a href="https://github.com/cjcoops" className="hover:text-chris-blue">
           GitHub
         </a>
       </li>
       <li className="mr-6 md:mr-8">
-        <a href="https://www.linkedin.com/in/coopercj/" className="">
+        <a
+          href="https://www.linkedin.com/in/coopercj/"
+          className="hover:text-chris-blue"
+        >
           LinkedIn
         </a>
       </li>
       <li className="mr-6 md:mr-8">
-        <a href="https://www.instagram.com/cjcoops/" className="">
+        <a
+          href="https://www.instagram.com/cjcoops/"
+          className="hover:text-chris-blue"
+        >
           Instagram
         </a>
       </li>
       <li>
-        <a href="mailto:cjcooper252@gmail.com" className="">
+        <a
+          href="mailto:cjcooper252@gmail.com"
+          className="hover:text-chris-blue"
+        >
           Email
         </a>
       </li>
@@ -89,13 +109,13 @@ const IndexPage = ({
       </p>
       <div className="hidden sm:flex">
         <a href="https://dev.to/cjcoops" className="">
-          <DevTo className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-gray-900" />
+          <DevTo className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
         </a>
         <a href="https://github.com/cjcoops" className="">
-          <GitHub className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-gray-900" />
+          <GitHub className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
         </a>
         <a href="https://www.instagram.com/cjcoops/" className="">
-          <Instagram className="w-6 h-6 text-gray-600 fill-current md:w-8 md:h-8 hover:text-gray-900" />
+          <Instagram className="w-6 h-6 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
         </a>
       </div>
     </div>

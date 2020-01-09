@@ -6,6 +6,7 @@ module.exports = {
   //     // ...
   //   }),
   // },
+
   theme: {
     // Add Apercu Pro font family
     fontFamily: {
@@ -24,7 +25,20 @@ module.exports = {
         "Segoe UI Symbol",
         "Noto Color Emoji",
       ],
-      mono: ["Apercu Pro Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+      mono: [
+        "Apercu Pro Mono",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Liberation Mono",
+        "Courier New",
+        "monospace",
+      ],
+    },
+    extend: {
+      colors: {
+        "chris-blue": "#234ef3",
+      },
     },
   },
   variants: {
