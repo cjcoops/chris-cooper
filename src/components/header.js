@@ -9,11 +9,9 @@ import Navigation from "./navigation";
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // window.addEventListener("resize", () => setIsExpanded(false));
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", () => setIsExpanded(false));
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("resize", () => setIsExpanded(false));
+  }, []);
 
   return (
     <header>
