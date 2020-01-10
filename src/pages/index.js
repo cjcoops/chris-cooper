@@ -9,7 +9,8 @@ import GitHub from "../svg/github.svg";
 
 const IndexPage = ({
   data: {
-    allMarkdownRemark: { edges },
+    // allMarkdownRemark: { edges },
+    site: { siteMetadata },
   },
 }) => (
   <Layout>
@@ -31,34 +32,28 @@ const IndexPage = ({
     </div>
     <ul className="flex-wrap hidden mt-8 font-medium text-gray-600 sm:flex text-m md:text-xl ">
       <li className="mr-6 md:mr-8">
-        <a href="https://dev.to/cjcoops" className="hover:text-chris-blue">
+        <a href={siteMetadata.devTo} className="hover:text-chris-blue">
           Dev.to
         </a>
       </li>
       <li className="mr-6 md:mr-8">
-        <a href="https://github.com/cjcoops" className="hover:text-chris-blue">
+        <a href={siteMetadata.github} className="hover:text-chris-blue">
           GitHub
         </a>
       </li>
       <li className="mr-6 md:mr-8">
-        <a
-          href="https://www.linkedin.com/in/coopercj/"
-          className="hover:text-chris-blue"
-        >
+        <a href={siteMetadata.linkedIn} className="hover:text-chris-blue">
           LinkedIn
         </a>
       </li>
       <li className="mr-6 md:mr-8">
-        <a
-          href="https://www.instagram.com/cjcoops/"
-          className="hover:text-chris-blue"
-        >
+        <a href={siteMetadata.instagram} className="hover:text-chris-blue">
           Instagram
         </a>
       </li>
       <li>
         <a
-          href="mailto:cjcooper252@gmail.com"
+          href={`mailto:${siteMetadata.email}`}
           className="hover:text-chris-blue"
         >
           Email
@@ -96,16 +91,19 @@ const IndexPage = ({
         >
           Netlify
         </a>
-        &nbsp;<span>💙</span>
+        &nbsp;
+        <span role="img" aria-label="love">
+          💙
+        </span>
       </p>
       <div className="hidden sm:flex">
-        <a href="https://dev.to/cjcoops" className="">
+        <a href={siteMetadata.devTo} className="">
           <DevTo className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
         </a>
-        <a href="https://github.com/cjcoops" className="">
+        <a href={siteMetadata.github} className="">
           <GitHub className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
         </a>
-        <a href="https://www.instagram.com/cjcoops/" className="">
+        <a href={siteMetadata.instagram} className="">
           <Instagram className="w-6 h-6 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
         </a>
       </div>
@@ -128,6 +126,15 @@ export const pageQuery = graphql`
             title
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        github
+        linkedIn
+        instagram
+        devTo
+        email
       }
     }
   }
