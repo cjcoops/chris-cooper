@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 import DevTo from "../svg/dev-badge.svg";
 import Instagram from "../svg/instagram.svg";
@@ -14,7 +15,7 @@ const IndexPage = ({
   },
 }) => (
   <Layout>
-    {/* <SEO title="Home" /> */}
+    <SEO title={siteMetadata.title} />
     <div className="text-gray-700 sm:text-2xl ">
       <div>
         <p className="mt-6 max-w-60ch">
@@ -135,6 +136,7 @@ export const pageQuery = graphql`
         instagram
         devTo
         email
+        title
       }
     }
   }
