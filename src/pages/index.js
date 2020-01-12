@@ -3,10 +3,12 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import HomePageSocialLink from "../components/home-page-social-link";
 
 import DevTo from "../svg/dev-badge.svg";
 import Instagram from "../svg/instagram.svg";
 import GitHub from "../svg/github.svg";
+import LinkedIn from "../svg/linkedin.svg";
 
 const IndexPage = ({
   data: {
@@ -19,47 +21,31 @@ const IndexPage = ({
     <div className="text-gray-700 sm:text-2xl ">
       <div>
         <p className="mt-6 max-w-60ch">
-          Hi, I'm&nbsp;
-          <span className="font-medium text-chris-blue">Chris Cooper</span>. I'm
-          a&nbsp;
-          <span className="font-medium text-chris-blue">web developer</span>
+          Hey, I'm&nbsp;
+          <strong className="font-medium text-chris-blue">Chris</strong>&nbsp;
+          <strong role="img" aria-label="peace">
+            ✌
+          </strong>
+          . I'm a&nbsp;
+          <strong className="font-medium text-chris-blue">web developer</strong>
           &nbsp;from England currently living and working in&nbsp;
-          <span className="font-medium text-chris-blue">Vancouver</span>. I'm
-          passionate about&nbsp;
-          <span className="font-medium text-chris-blue">JavaScript</span> and
-          writing clean, tested and maintainable code.
+          <strong className="font-medium text-chris-blue">Vancouver</strong>.
+          I'm passionate about&nbsp;
+          <strong className="font-medium text-chris-blue">
+            JavaScript
+          </strong>{" "}
+          and writing{" "}
+          <strong className="font-medium text-chris-blue">quality code</strong>{" "}
+          to build awesome web applications.
         </p>
       </div>
     </div>
     <ul className="flex-wrap hidden mt-8 font-medium text-gray-600 sm:flex text-m md:text-xl ">
-      <li className="mr-6 md:mr-8">
-        <a href={siteMetadata.devTo} className="hover:text-chris-blue">
-          Dev.to
-        </a>
-      </li>
-      <li className="mr-6 md:mr-8">
-        <a href={siteMetadata.github} className="hover:text-chris-blue">
-          GitHub
-        </a>
-      </li>
-      <li className="mr-6 md:mr-8">
-        <a href={siteMetadata.linkedIn} className="hover:text-chris-blue">
-          LinkedIn
-        </a>
-      </li>
-      <li className="mr-6 md:mr-8">
-        <a href={siteMetadata.instagram} className="hover:text-chris-blue">
-          Instagram
-        </a>
-      </li>
-      <li>
-        <a
-          href={`mailto:${siteMetadata.email}`}
-          className="hover:text-chris-blue"
-        >
-          Email
-        </a>
-      </li>
+      <HomePageSocialLink href={siteMetadata.devTo} name="Dev.to" />
+      <HomePageSocialLink href={siteMetadata.github} name="GitHub" />
+      <HomePageSocialLink href={siteMetadata.linkedIn} name="LinkedIn" />
+      <HomePageSocialLink href={siteMetadata.instagram} name="Instagram" />
+      <HomePageSocialLink href={`mailto:${siteMetadata.email}`} name="Email" />
     </ul>
     {/* <div className="pt-6 mt-6 border-t border-gray-400 sm:text-2xl">
       <h2 className="font-medium text-gray-900">Latest Posts</h2>
@@ -99,13 +85,16 @@ const IndexPage = ({
       </p>
       <div className="hidden sm:flex">
         <a href={siteMetadata.devTo} className="">
-          <DevTo className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
+          <DevTo className="footer-social-link" />
         </a>
         <a href={siteMetadata.github} className="">
-          <GitHub className="w-6 h-6 mr-4 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
+          <GitHub className="footer-social-link" />
+        </a>
+        <a href={siteMetadata.linkedIn} className="">
+          <LinkedIn className="footer-social-link" />
         </a>
         <a href={siteMetadata.instagram} className="">
-          <Instagram className="w-6 h-6 text-gray-600 fill-current md:w-8 md:h-8 hover:text-chris-blue" />
+          <Instagram className="mr-0 footer-social-link" />
         </a>
       </div>
     </div>

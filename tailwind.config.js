@@ -38,6 +38,7 @@ module.exports = {
     extend: {
       colors: {
         "chris-blue": "#234ef3",
+        "chris-teal": "#23f3c9",
       },
     },
   },
