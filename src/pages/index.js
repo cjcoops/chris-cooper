@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import HomePageSocialLink from "../components/home-page-social-link";
+import PostExcerpt from "../components/post-excerpt";
 
 import DevTo from "../svg/dev-badge.svg";
 import Instagram from "../svg/instagram.svg";
@@ -12,7 +13,7 @@ import LinkedIn from "../svg/linkedin.svg";
 
 const IndexPage = ({
   data: {
-    // allMarkdownRemark: { edges },
+    allMarkdownRemark: { edges },
     site: { siteMetadata },
   },
 }) => (
@@ -47,14 +48,14 @@ const IndexPage = ({
       <HomePageSocialLink href={siteMetadata.instagram} name="Instagram" />
       <HomePageSocialLink href={`mailto:${siteMetadata.email}`} name="Email" />
     </ul>
-    {/* <div className="pt-6 mt-6 border-t border-gray-400 sm:text-2xl">
-      <h2 className="font-medium text-gray-900">Latest Posts</h2>
+    <div className="pt-6 mt-6 border-t border-gray-400 sm:text-2xl">
+      <h2 className="-mb-4 font-medium text-gray-600 ">Latest Posts</h2>
       <div>
         {edges.map(edge => (
           <PostExcerpt key={edge.node.id} post={edge.node} />
         ))}
       </div>
-    </div> */}
+    </div>
     <div className="items-center justify-between pt-6 mt-6 mb-20 border-t border-gray-400 sm:mt-8 md:mt-10 sm:flex">
       <p className="text-xs text-gray-700 sm:text:base md:text-lg">
         Built with&nbsp;
@@ -109,10 +110,10 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 100)
+          excerpt(pruneLength: 200)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
-            path
+            devTo
             title
           }
         }

@@ -85,3 +85,13 @@
 .max-w-60ch {
   max-width: 60ch;
 }
+
+@variants hover {
+  .translate-r-3px {
+    transform: translateX(3px) !important;
+  }
+}
+
+.transition-fast {
+  transition: all 0.2s ease !important;
+}
