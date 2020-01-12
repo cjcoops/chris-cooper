@@ -48,6 +48,10 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
@@ -58,10 +62,6 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
-        },
-        {
-          property: `og:url`,
-          content: site.siteMetadata.siteUrl,
         },
         {
           name: `twitter:card`,
