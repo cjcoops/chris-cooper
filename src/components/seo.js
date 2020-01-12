@@ -68,12 +68,20 @@ function SEO({ description, lang, meta, title }) {
           content: `summary`,
         },
         {
+          property: `twitter:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
           content: title,
+        },
+        {
+          name: `twitter:image`,
+          content: kamloops,
         },
         {
           name: `twitter:description`,
