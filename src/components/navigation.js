@@ -5,8 +5,6 @@ import GitHub from "../svg/github.svg";
 import LinkedIn from "../svg/linkedin.svg";
 import { useStaticQuery, graphql } from "gatsby";
 
-// import Resume from "../assets/resume.pdf";
-
 const Navigation = () => {
   const {
     site: { siteMetadata },
