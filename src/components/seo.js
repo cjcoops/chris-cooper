@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import favicon from "../images/favicon.png";
+import kamloops from "../images/kamloops.jpg";
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -48,6 +49,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: kamloops,
         },
         {
           property: `og:type`,

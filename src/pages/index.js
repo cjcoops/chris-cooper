@@ -17,15 +17,15 @@ const IndexPage = ({
   },
 }) => (
   <Layout>
-    <SEO title={siteMetadata.title} />
+    <SEO title="Home" />
     <div className="text-gray-700 sm:text-2xl ">
       <div>
         <p className="mt-6 max-w-60ch">
           Hey, I'm&nbsp;
           <strong className="font-medium text-chris-blue">Chris</strong>&nbsp;
-          <strong role="img" aria-label="peace">
+          <span role="img" aria-label="peace">
             ✌
-          </strong>
+          </span>
           . I'm a&nbsp;
           <strong className="font-medium text-chris-blue">web developer</strong>
           &nbsp;from England currently living and working in&nbsp;
@@ -131,8 +131,8 @@ export const pageQuery = graphql`
   }
 `;
 
-{
-  /* <Layout>
+// {
+/* <Layout>
 <SEO title="Home" />
 <h1>Hi people</h1>
 <p>Welcome to your new Gatsby site.</p>
@@ -162,4 +162,4 @@ export const pageQuery = graphql`
 
 <Link to="/page-2/">Go to page 2</Link>
 </Layout> */
-}
+// }
