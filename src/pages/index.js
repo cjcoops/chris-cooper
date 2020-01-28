@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import HomePageSocialLink from "../components/home-page-social-link";
 import PostExcerpt from "../components/post-excerpt";
+import Project from "../components/project";
 
 import DevTo from "../svg/dev-badge.svg";
 import Instagram from "../svg/instagram.svg";
@@ -54,6 +55,12 @@ const IndexPage = ({
         {edges.map(edge => (
           <PostExcerpt key={edge.node.id} post={edge.node} />
         ))}
+      </div>
+    </div>
+    <div className="pt-6 mt-6 border-t border-gray-400 sm:text-2xl">
+      <h2 className="-mb-4 font-medium text-gray-600 ">Projects</h2>
+      <div>
+        <Project />
       </div>
     </div>
     <div className="items-center justify-between pt-6 mt-6 mb-20 border-t border-gray-400 sm:mt-8 md:mt-10 sm:flex">
