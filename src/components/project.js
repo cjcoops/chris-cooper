@@ -9,7 +9,7 @@ const Project = () => {
       >
         US State Machines{" "}
       </a>
-      <div className="hidden mt-1 text-gray-700 md:block max-w-60ch">
+      <div className="mt-1 text-gray-700 max-w-60ch">
         A game to learn US States built with State Machines and React
       </div>
       <a
