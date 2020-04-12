@@ -16,6 +16,7 @@ const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
     site: { siteMetadata },
+    dataJson: { projects },
   },
 }) => (
   <Layout>
@@ -60,7 +61,9 @@ const IndexPage = ({
     <div className="pt-6 mt-6 border-t border-gray-400 sm:text-2xl">
       <h2 className="-mb-4 font-medium text-gray-600 ">Projects</h2>
       <div>
-        <Project />
+        {projects.map(project => (
+          <Project key={project.name} project={project} />
+        ))}
       </div>
     </div>
     <div className="items-center justify-between pt-6 mt-6 mb-20 border-t border-gray-400 sm:mt-8 md:mt-10 sm:flex">
@@ -134,6 +137,14 @@ export const pageQuery = graphql`
         devTo
         email
         title
+      }
+    }
+    dataJson {
+      projects {
+        name
+        description
+        github
+        url
       }
     }
   }

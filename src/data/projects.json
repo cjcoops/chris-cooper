@@ -1,0 +1,21 @@
+{
+  "projects": [
+    {
+      "name": "US State Machines",
+      "description": "A game to learn US States built with State Machines and React",
+      "github": "https://github.com/cjcoops/us-state-machine",
+      "url": "https://us-states.netlify.com/"
+    },
+    {
+      "name": "Plant Water Tracker",
+      "description": "An app to keep track of plant watering built with Next.js, Apollo, GraphQL, MongoDB",
+      "github": "https://github.com/cjcoops/plant-watering-tracker"
+    },
+    {
+      "name": "D3 Visualizations",
+      "description": "A collection of charts made as I learn D3.js using COVID-19 data",
+      "github": "https://github.com/cjcoops/d3-visualizations",
+      "url": "https://d3-visualizations.netlify.com/"
+    }
+  ]
+}
