@@ -1,0 +1,65 @@
+---
+title: "An Alternative to Container Classes"
+abstract: "How to use CSS Grid as an alternative to wrapper classes"
+publishedOn: "2024-01-14T12:00:00-0800"
+tags: ["css"]
+---
+
+- Can use CSS Grid as an alternative to creating container/wrapper classes
+- Initial setup is more complex, but once set up results in a cleaner HTML with less nesting
+- Assuming we want centred content of 3 different widths:
+  - Main content
+  - Breakout (a little wider)
+  - Full page width
+- Can use the following snippet
+
+```css
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 900px;
+  --breakout-max-width: 1200px;
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+img.full-width {
+  width: 100%;
+  max-height: 45vh;
+  object-fit: cover;
+}
+```
+
+### Resources
+
+- https://codepen.io/kevinpowell/pen/ExrZrrw
+- https://smolcss.dev/#smol-breakout-grid

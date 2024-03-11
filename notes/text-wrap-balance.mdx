@@ -1,0 +1,20 @@
+---
+title: "Text wrap: balance"
+abstract: "Evenly balance how much text appears on each line"
+publishedOn: "2023-11-09T12:00:00-0800"
+tags: ["css"]
+---
+
+- When text wraps onto more than one line, using this `text-wrap` property more evenly balances how much text appears on each line
+- Probably best to be used with headers
+- Limited to six lines max due to extra performance cost
+
+![Text wrap balance vs unbalanced](./text-wrap-balance.png)
+
+### Usage
+
+```html
+<h1 style="text-wrap: balance; max-inline-size: 60ch;">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+</h1>
+```

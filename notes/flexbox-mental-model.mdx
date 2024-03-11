@@ -1,0 +1,84 @@
+---
+title: "Flexbox Mental Model"
+abstract: "How to think about flexbox"
+publishedOn: "2023-10-04T12:00:00-0800"
+tags: ["css"]
+---
+
+1. We have a Primary Axis (determined by the `flex-direction` property) and a Cross Axis
+2. To distribute all items on the Primary Axis, we use `justify-content`
+3. To position all items along the Cross Axis we use `align-items`
+4. To align a particular item along the Cross Axis we use `align-self`
+5. It is important to note that we can position items on the cross axis without impacting other items. The same is not true for the primary axis where we can only talk about how to distrubute the _group_.
+6. Keyword summary
+   1. Justify => Primary
+   2. Align => Cross
+   3. Content => A group of "stuff" that can be distributed
+   4. Items => Single items that can be positioned individually
+7. When we provide a `width` in Flexbox, it's known as a hypothetical size - it's not a hard rule, it's more of a suggestion.
+8. `flex-basis` refers to the size along the primary axis (so the horizontal width if we have `flex-direction: row`)
+9. `flex-grow` refers to the factor by which an item should grow along the primary axis if there is space. By default this is 0. Absolute values don't matter, its about the ratio between all items' `flex-grow` values.
+10. `flex-shrink` refers to the factor by which an item should _shrink_ along the primary axis. Default value is 1. Set to 0 to prevent shrinking.
+11. If an item has a minimum size e.g. `min-width` then this will always be respected. To override a built-in size set `min-width: 0` but be very careful as normally this is for a reason!
+12. `margin: auto` will gobble up remaining space
+13. Applying `flex-wrap: wrap` means items won't shrink below their hypothetical size. This gives us a new property `align-content` - distribute the group ("content", not "items") along the cross axis (i.e. "align")
+
+```html
+<style>
+  form {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .name {
+    flex-grow: 1;
+    flex-basis: 120px;
+  }
+  .email {
+    flex-grow: 3;
+    flex-basis: 170px;
+  }
+  button {
+    flex-grow: 1;
+    flex-basis: 70px;
+  }
+</style>
+
+<form>
+  <label class="name" for="name-field">
+    Name:
+    <input id="name-field" />
+  </label>
+  <label class="email" for="email-field">
+    Email:
+    <input id="email-field" type="email" />
+  </label>
+  <button>Submit</button>
+</form>
+```
+
+```css
+/* Cosmetic styles */
+form {
+  padding: 8px;
+  border: 1px solid hsl(0deg 0% 50%);
+}
+
+label {
+  font-weight: 500;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 4px;
+}
+button {
+  height: 2.5rem;
+}
+```
+
+## Resources
+
+https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/

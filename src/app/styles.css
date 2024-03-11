@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TODO: Add this to the Tailwind config. Overrides for markdown p code content. */
+p code {
+  display: inline-block;
+  font-size: 0.9em;
+  /* violet-100 */
+  background: rgb(237 233 254);
+  padding: 3px 6px;
+  margin: -0.25em -1px;
+  border-radius: 3px;
+}
+
+.dark p code {
+  /* gray-800 */
+  background: rgb(17 24 39);
+}
