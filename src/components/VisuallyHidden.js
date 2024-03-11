@@ -10,7 +10,7 @@ function VisuallyHidden({
   return (
     <Element
       className={clsx(
-        "absolute m-[1px] size-px overflow-hidden border-[0] p-0 [clip:rect(0_0_0_0)]",
+        "absolute m-px size-px overflow-hidden border-[0] p-0 [clip:rect(0_0_0_0)]",
         className
       )}
       {...delegated}
