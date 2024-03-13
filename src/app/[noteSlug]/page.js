@@ -2,13 +2,9 @@ import React from "react";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 import NoteHero from "@/components/NoteHero";
-import CodeBlock from "@/components/CodeBlock";
 import { loadNote } from "@/data";
 import { SITE_TITLE } from "@/constants";
-
-const COMPONENT_MAP = {
-  pre: CodeBlock,
-};
+import { COMPONENT_MAP } from "@/component-map";
 
 export async function generateMetadata({ params }) {
   const { frontmatter } = await loadNote(params.noteSlug);

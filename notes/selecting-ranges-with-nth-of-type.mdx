@@ -1,0 +1,50 @@
+---
+title: "Selecting ranges with nth-of-type"
+abstract: "Use the `nth-of-type` selector to select ranges in a list of elements."
+publishedOn: "2024-03-13T12:00:00-0800"
+tags: [css]
+---
+
+We can use the `nth-of-type` selector to select ranges in a list of elements.
+
+In the below example boxes 1-5 are blue, boxes 6-7 are green and boxes 8-12 are red.
+
+<SelectingRangesWithNthOfType />
+
+We can achieve this with the following CSS:
+
+```css
+.box {
+  border: 4px solid red;
+}
+
+.box:nth-of-type(n + 1):nth-of-type(-1n + 5) {
+  border-color: blue;
+}
+
+.box:nth-of-type(n + 6):nth-of-type(-1n + 7) {
+  border-color: green;
+}
+```
+
+### Explanation
+
+The `nth-of-type` selector has an argument matching the pattern An+B where:
+
+- A is an integer step size
+- B is an integer offset
+- n is all nonnegative integers, starting from 0
+
+It can be read as the An+B-th element of a list.
+
+Therefore:
+
+```css
+.box:nth-of-type(n + 1):nth-of-type(-1n + 5)
+```
+
+targets elements with the class `.box` based on their position among siblings of the same type (i.e., the same tag name) according to two criteria defined by the :nth-of-type pseudo-class:
+
+- `nth-of-type(n + 1)`: This part selects every `.box` element from the first one onwards. The formula n + 1 starts counting at 1 (since n starts at 0), so it includes every element of this type.
+
+- `nth-of-type(-1n + 5)`: This part selects `.box` elements counting backwards from the 5th one. The formula -1n + 5 effectively counts backward, selecting elements from the first through the fifth. For example, if there are 5 .box elements, this selector will match all of them. If there are 10, it will match the first 5.
