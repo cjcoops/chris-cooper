@@ -1,0 +1,52 @@
+---
+title: "TypeScript Conditional Types"
+abstract: "Describe the relationship between input and output types"
+publishedOn: "2024-04-12T12:00:00-0800"
+tags: [typescript]
+---
+
+A conditional type follows the ternary pattern:
+
+```
+  SomeType extends OtherType ? TrueType : FalseType;
+```
+
+The main use case for a conditional type is when we want to declare the return type of a function, and that return type depends on the type of the input.
+
+Suppose we have the `createLabel` function which takes either a string name or a number ID, and then returns either a name label object in the case of a string input, or a ID label object in the case of a number input:
+
+```ts
+interface IdLabel {
+  id: number /* some fields */;
+}
+interface NameLabel {
+  name: string /* other fields */;
+}
+
+// We need 3 overloads
+function createLabel(id: number): IdLabel;
+function createLabel(name: string): NameLabel;
+function createLabel(nameOrId: string | number): IdLabel | NameLabel;
+
+function createLabel(nameOrId: string | number): IdLabel | NameLabel {
+  throw "unimplemented";
+}
+```
+
+This is pretty cumbersome since we need to create three overloads for the `createLabel` function. If we add another input type then we'd have to create even more overloads.
+
+Instead we can create a conditional type:
+
+```ts
+type NameOrId<T extends number | string> = T extends number
+  ? IdLabel
+  : NameLabel;
+```
+
+And then instead of needing the overloads we can simply declare the function as:
+
+```ts
+function createLabel<T extends number | string>(idOrName: T): NameOrId<T> {
+  throw "unimplemented";
+}
+```
