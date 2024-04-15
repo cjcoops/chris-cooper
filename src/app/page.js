@@ -4,8 +4,10 @@ import React from "react";
 import NoteSummaryCard from "@/components/NoteSummaryCard";
 import { getNoteList } from "@/data";
 
-async function Home() {
-  const notes = await getNoteList();
+async function Home(params) {
+  const { tag } = params.searchParams;
+
+  const notes = await getNoteList(tag);
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col items-center px-3 py-16 sm:px-4">
@@ -22,7 +24,9 @@ async function Home() {
           useful too!
         </p>
       </div>
-      <h2 className="mb-8 mt-4 text-3xl font-semibold">Latest Notes</h2>
+      <h2 className="mb-8 mt-4 text-3xl font-semibold">
+        Latest Notes{tag ? ` tagged "${tag}"` : null}
+      </h2>
 
       {notes.map(({ slug, ...delegated }) => (
         <NoteSummaryCard key={slug} slug={slug} {...delegated} />

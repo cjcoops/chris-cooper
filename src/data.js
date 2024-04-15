@@ -11,7 +11,7 @@ function readDirectory(localPath) {
   return fs.readdir(path.join(process.cwd(), localPath));
 }
 
-export async function getNoteList() {
+export async function getNoteList(tag) {
   const fileNames = await readDirectory("/notes");
 
   const notes = [];
@@ -20,6 +20,10 @@ export async function getNoteList() {
     const rawContent = await readFile(`/notes/${fileName}`);
 
     const { data: frontmatter } = matter(rawContent);
+
+    if (tag && !frontmatter.tags.includes(tag)) {
+      continue;
+    }
 
     notes.push({
       slug: fileName.replace(".mdx", ""),
