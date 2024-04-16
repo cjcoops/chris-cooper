@@ -15,11 +15,16 @@ export async function getNoteList(tag) {
   const fileNames = await readDirectory("/notes");
 
   const notes = [];
+  const tags = new Set();
 
   for (let fileName of fileNames) {
     const rawContent = await readFile(`/notes/${fileName}`);
 
     const { data: frontmatter } = matter(rawContent);
+
+    for (const tag of frontmatter.tags) {
+      tags.add(tag);
+    }
 
     if (tag && !frontmatter.tags.includes(tag)) {
       continue;
@@ -31,7 +36,10 @@ export async function getNoteList(tag) {
     });
   }
 
-  return notes.sort((p1, p2) => (p1.publishedOn < p2.publishedOn ? 1 : -1));
+  return {
+    notes: notes.sort((p1, p2) => (p1.publishedOn < p2.publishedOn ? 1 : -1)),
+    tags: Array.from(tags).sort(),
+  };
 }
 
 export const loadNote = cache(async function loadNote(slug) {

@@ -7,7 +7,7 @@ import { getNoteList } from "@/data";
 async function Home(params) {
   const { tag } = params.searchParams;
 
-  const notes = await getNoteList(tag);
+  const { notes, tags } = await getNoteList(tag);
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col items-center px-3 py-16 sm:px-4">
