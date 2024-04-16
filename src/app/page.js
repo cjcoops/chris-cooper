@@ -2,6 +2,7 @@
 import React from "react";
 
 import NoteSummaryCard from "@/components/NoteSummaryCard";
+import TagsFilter from "@/components/TagsFilter";
 import { getNoteList } from "@/data";
 
 async function Home(params) {
@@ -15,7 +16,7 @@ async function Home(params) {
       <div className="mb-8 grid gap-8 text-lg">
         <p>
           👋 Hi, I'm Chris. Welcome to my site! I'm a software engineer living
-          in Vancouver, BC, specialzing in front-end and the web.
+          in Vancouver, BC, specializing in front-end and the web.
         </p>
         <p>
           I use this site to make notes of what I've learnt in the world of
@@ -27,6 +28,7 @@ async function Home(params) {
       <h2 className="mb-8 mt-4 text-3xl font-semibold">
         Latest Notes{tag ? ` tagged "${tag}"` : null}
       </h2>
+      <TagsFilter tags={tags} />
 
       {notes.map(({ slug, ...delegated }) => (
         <NoteSummaryCard key={slug} slug={slug} {...delegated} />
