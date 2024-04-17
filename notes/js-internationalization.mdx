@@ -1,0 +1,55 @@
+---
+title: "JavaScript Internationalization API"
+abstract: "Some cool uses of the JavaScript Internationalization API."
+publishedOn: "2024-04-17T12:00:00-0800"
+tags: [javascript]
+---
+
+Here are some cool uses of the JavaScript `Intl` API.
+
+## Formatting Dates
+
+```js
+const date = new Date(Date.now());
+
+new Intl.DateTimeFormat("en-US", {
+  timeZone: "America/Los_Angeles",
+  minute: "numeric",
+  hour: "numeric",
+}).format(date);
+
+// 9:45 AM (returns the current time in that timeZone)
+```
+
+## Formatting Numbers
+
+In the US the spelling "liter" is used whereas in the UK "litre" is used.
+
+```js
+new Intl.NumberFormat("en-GB", {
+  style: "unit",
+  unit: "liter",
+  unitDisplay: "long",
+}).format(1); // '1 litre'
+```
+
+## Formatting Lists
+
+```js
+const list = ["Motorcycle", "Bus", "Car"];
+
+new Intl.ListFormat(
+  "en-US", 
+  { style: "long", type: "conjunction" }
+).format(list); // 'Motorcycle, Bus, and Car'
+```
+
+## Language Sensitive String Comparison
+
+```js
+['Z', 'a', 'z', 'ä'].sort();
+// Expected output: Array ['Z', 'a', 'z', 'ä']
+
+['Z', 'a', 'z', 'ä'].sort(new Intl.Collator('de').compare);
+// Expected output: Array ["a", "ä", "z", "Z"]
+```
