@@ -37,7 +37,7 @@ function Header({ initialTheme, className, ...delegated }) {
   return (
     <header
       className={clsx(
-        "mx-auto flex h-20 w-full max-w-4xl items-center justify-between px-3 md:px-4",
+        "relative mx-auto flex h-20 w-full max-w-4xl items-center justify-between px-3 md:px-4",
         className
       )}
       {...delegated}

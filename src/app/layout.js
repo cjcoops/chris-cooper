@@ -38,13 +38,14 @@ function RootLayout({ children }) {
         mainFont.variable,
         monoFont.variable,
         theme === "dark" ? "dark" : "",
-        "bg-purple-50 bg-gradient-to-b from-purple-50 to-purple-200 text-gray-900  transition-colors duration-200 selection:bg-amber-300 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-700 dark:text-gray-100 dark:selection:bg-amber-700"
+        " bg-purple-200 text-gray-900  transition-colors duration-200 selection:bg-amber-300  dark:bg-gray-700 dark:text-gray-100 dark:selection:bg-amber-700"
       )}
     >
       <head>
         <link rel="icon" href="https://fav.farm/🍍" />
       </head>
-      <body className="flex min-h-screen flex-col">
+      <body className="relative flex min-h-screen flex-col">
+        <div className="absolute left-0 top-0 h-screen w-full bg-gradient-to-b from-purple-50 to-purple-200 dark:bg-gray-900 dark:from-gray-900 dark:to-gray-700" />
         <Header initialTheme={theme} />
         <main className="relative flex-1">{children}</main>
       </body>
